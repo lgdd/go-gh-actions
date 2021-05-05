@@ -2,8 +2,9 @@ name: pre_release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*-alpha*"
+      - "*-beta*"
 
 jobs:
   pre_release:
@@ -28,8 +29,8 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: ${{ github.ref  }}
           prerelease: true
-          title: "Development Build"
+          title: ${{ github.ref  }}
           files: |
             dist/*
