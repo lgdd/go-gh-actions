@@ -1,4 +1,4 @@
-name: pre_release
+name: Pre-Release
 
 on:
   push:
@@ -29,8 +29,9 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ github.ref  }}
+          automatic_release_tag: "${{ github.ref  }}"
           prerelease: true
-          title: ${{ github.ref  }}
+          title: "${{ github.ref }}"
           files: |
-            dist/*
+            dist/*.tar.gz
+            dist/checksums.txt
