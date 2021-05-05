@@ -5,6 +5,7 @@ on:
     tags:
       - "*-alpha*"
       - "*-beta*"
+      - "*-rc*"
 
 jobs:
   pre_release:
