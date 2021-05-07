@@ -34,4 +34,7 @@ jobs:
           prerelease: false
           files: |
             dist/*.tar.gz
+            dist/*.apk
+            dist/*.deb
+            dist/*.rpm
             dist/checksums.txt
