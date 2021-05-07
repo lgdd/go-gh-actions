@@ -15,15 +15,16 @@ builds:
       - darwin
     goarch:
       - amd64
+      - 386
       - arm64
 archives:
-  replacements:
-    amd64: 64-bit
-    386: 32-bit
-    darwin: macOS
-  format_overrides:
-    - goos: windows
-      format: zip
+    - replacements:
+        amd64: 64-bit
+        386: 32-bit
+        darwin: macOS
+      format_overrides:
+        - goos: windows
+          format: zip
 checksum:
   name_template: 'checksums.txt'
 snapshot:
