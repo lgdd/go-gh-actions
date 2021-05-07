@@ -21,6 +21,14 @@ archives:
     - format_overrides:
         - goos: windows
           format: zip
+nfpms:
+- description: Sample project.
+  homepage: https://github.com/lgdd/go-gh-actions
+  license: MIT
+  formats:
+  - deb
+  - rpm
+  - apk
 brews:
     - github:
           owner: lgdd
