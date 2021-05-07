@@ -3,7 +3,7 @@ name: Test
 on: [push, pull_request]
 
 jobs:
-  pre_release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
