@@ -17,7 +17,6 @@ var (
 
 func main() {
 	args := os.Args[1:]
-	fmt.Printf("%v\n", args)
 	if len(args) == 1 {
 		cmd := args[0]
 		if cmd == "version" {
@@ -35,8 +34,12 @@ func main() {
 		fmt.Println("- version")
 		fmt.Println("- update")
 	} else {
-		fmt.Println("unknown command")
-		os.Exit(1)
+		if args[0] == "echo" {
+			fmt.Printf("%v", args[1:])
+		} else {
+			fmt.Println("unknown command")
+			os.Exit(1)
+		}
 	}
 }
 
