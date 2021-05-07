@@ -25,7 +25,7 @@ func main() {
 			fmt.Printf("Commit: %s\n", commit)
 			fmt.Printf("Date: %s\n", date)
 		} else if cmd == "update" {
-
+			doSelfUpdate()
 		} else {
 			fmt.Println("unknown command")
 			os.Exit(1)
@@ -45,7 +45,7 @@ func doSelfUpdate() {
 	latest, err := selfupdate.UpdateSelf(v, "lgdd/go-gh-actions")
 	if err != nil {
 		log.Println("Binary update failed:", err)
-		return
+		os.Exit(1)
 	}
 	if latest.Version.Equals(v) {
 		// latest version is the same as current version. It means current binary is up to date.
