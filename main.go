@@ -16,6 +16,7 @@ var (
 )
 
 func main() {
+	selfupdate.EnableLog()
 	args := os.Args[1:]
 	if len(args) == 1 {
 		cmd := args[0]
