@@ -33,4 +33,8 @@ jobs:
           prerelease: true
           files: |
             dist/*.tar.gz
+            dist/*.zip
+            dist/*.apk
+            dist/*.deb
+            dist/*.rpm
             dist/checksums.txt
