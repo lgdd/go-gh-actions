@@ -21,6 +21,13 @@ archives:
     - format_overrides:
         - goos: windows
           format: zip
+brews:
+    - github:
+          owner: lgdd
+          name: go-gh-actions
+      folder: Formula
+      homepage: https://github.com/lgdd/go-gh-actions
+      description: A sample go app testing GitHub Actions & GoReleaser.
 checksum:
   name_template: 'checksums.txt'
 snapshot:
