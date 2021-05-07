@@ -30,7 +30,8 @@ nfpms:
       - rpm
       - apk
 brews:
-    - tap:
+  - 
+    tap:
       owner: lgdd
       name: go-gh-actions
     folder: Formula
