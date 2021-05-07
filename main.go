@@ -25,6 +25,19 @@ func main() {
 			fmt.Printf("Date: %s\n", date)
 		} else if cmd == "update" {
 			doSelfUpdate()
+		} else if cmd == "check" {
+			latest, found, err := selfupdate.DetectLatest("lgdd/go-gh-actions")
+			if err != nil {
+				log.Println("Error occurred while detecting version:", err)
+				os.Exit(1)
+			}
+			if found {
+				fmt.Printf("Latest version found: \t%v\n", latest.Version)
+				fmt.Printf("Current version: \t%v\n", version)
+				fmt.Printf("Latest:\n%v\n", latest)
+			} else {
+				fmt.Println("Latest version not found")
+			}
 		} else {
 			fmt.Println("unknown command")
 			os.Exit(1)
