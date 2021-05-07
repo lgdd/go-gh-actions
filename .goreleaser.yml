@@ -18,31 +18,31 @@ builds:
       - 386
       - arm64
 archives:
-    - format_overrides:
-        - goos: windows
-          format: zip
+  - format_overrides:
+      - goos: windows
+        format: zip
 nfpms:
-- description: Sample project.
-  homepage: https://github.com/lgdd/go-gh-actions
-  license: MIT
-  formats:
-  - deb
-  - rpm
-  - apk
+  - description: Sample project.
+    homepage: https://github.com/lgdd/go-gh-actions
+    license: MIT
+    formats:
+      - deb
+      - rpm
+      - apk
 brews:
-    - github:
-          owner: lgdd
-          name: go-gh-actions
-      folder: Formula
-      homepage: https://github.com/lgdd/go-gh-actions
-      description: A sample go app testing GitHub Actions & GoReleaser.
+  - github:
+      owner: lgdd
+      name: go-gh-actions
+    folder: Formula
+    homepage: https://github.com/lgdd/go-gh-actions
+    description: A sample go app testing GitHub Actions & GoReleaser.
 checksum:
-  name_template: 'checksums.txt'
+  name_template: "checksums.txt"
 snapshot:
   name_template: "{{ .Tag }}"
 changelog:
   sort: asc
   filters:
     exclude:
-      - '^docs:'
-      - '^test:'
+      - "^docs:"
+      - "^test:"
