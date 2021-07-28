@@ -33,7 +33,7 @@ brews:
   - 
     tap:
       owner: lgdd
-      name: go-gh-actions
+      name: homebrew-go-gh-actions
     folder: Formula
     homepage: https://github.com/lgdd/go-gh-actions
     description: A sample go app testing GitHub Actions & GoReleaser.
