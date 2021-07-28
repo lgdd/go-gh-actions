@@ -11,22 +11,22 @@ class GoGhActions < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lgdd/go-gh-actions/releases/download/v1.2.3/go-gh-actions_1.2.3_darwin_amd64.tar.gz"
-      sha256 "e40140e852749f17994653dc89bb3d4fbade8fe5161f8c32556009111e875d2a"
+      sha256 "8cdb10b754f2aa95943a06a653a322447d0d2c00673dc799e011b1b1898ae298"
     end
     if Hardware::CPU.arm?
       url "https://github.com/lgdd/go-gh-actions/releases/download/v1.2.3/go-gh-actions_1.2.3_darwin_arm64.tar.gz"
-      sha256 "22d0ebf9237eb7502c357c6c3fb5e8924d4f9966c6e567ecf0eb00b697d20267"
+      sha256 "a118aa5e14637491e7808233b8556e099c58d36c44eba8ba3e4d41f1f28294e8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/lgdd/go-gh-actions/releases/download/v1.2.3/go-gh-actions_1.2.3_linux_amd64.tar.gz"
-      sha256 "1f1c5d423359117adfbf16de7771eb1f2996be03700e208f10fb8c7b1508d75f"
+      sha256 "89b646ccd448d88e2f92cb0f16c4533ae73e8e29dee904bfceb4ae63081fe0e0"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lgdd/go-gh-actions/releases/download/v1.2.3/go-gh-actions_1.2.3_linux_arm64.tar.gz"
-      sha256 "f376c9a3f2227b10ca1593d1558f9275a68fb5459e4869501e1d30140b4ca8e4"
+      sha256 "728dd8a4544c3954c440d27385e3dd470b0bfc96d1312aa173df514a6b2240af"
     end
   end
 
