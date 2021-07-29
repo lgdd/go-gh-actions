@@ -37,17 +37,3 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Create Release"
-        if: ${{ success() }}
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          draft: false
-          prerelease: false
-          files: |
-            dist/*.tar.gz
-            dist/*.zip
-            dist/*.apk
-            dist/*.deb
-            dist/*.rpm
-            dist/checksums.txt
