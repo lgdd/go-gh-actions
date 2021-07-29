@@ -39,6 +39,7 @@ nfpms:
       darwin: macOS
 brews:
   - 
+    name: goghactions
     tap:
       owner: lgdd
       name: homebrew-go-gh-actions
