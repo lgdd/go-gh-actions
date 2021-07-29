@@ -21,6 +21,10 @@ archives:
   - format_overrides:
       - goos: windows
         format: zip
+    replacements:
+      amd64: 64-bit
+      386: 32-bit
+      darwin: macOS
 nfpms:
   - description: Sample project.
     homepage: https://github.com/lgdd/go-gh-actions
@@ -29,6 +33,10 @@ nfpms:
       - deb
       - rpm
       - apk
+    replacements:
+      amd64: 64-bit
+      386: 32-bit
+      darwin: macOS
 brews:
   - 
     tap:
