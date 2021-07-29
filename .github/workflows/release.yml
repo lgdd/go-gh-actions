@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run GoReleaser
-        if: {{ success() }}
+        if: ${{ success() }}
         uses: goreleaser/goreleaser-action@v2
         with:
           version: latest
