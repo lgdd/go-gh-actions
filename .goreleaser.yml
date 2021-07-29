@@ -39,7 +39,6 @@ nfpms:
       darwin: macOS
 brews:
   - 
-    name: goghactions
     tap:
       owner: lgdd
       name: homebrew-go-gh-actions
@@ -47,6 +46,8 @@ brews:
     folder: Formula
     homepage: https://github.com/lgdd/go-gh-actions
     description: A sample go app testing GitHub Actions & GoReleaser.
+    install: |
+      bin.install "goghactions"
 checksum:
   name_template: "checksums.txt"
 snapshot:
