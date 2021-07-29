@@ -21,9 +21,9 @@ func main() {
 	if len(args) == 1 {
 		cmd := args[0]
 		if cmd == "version" {
-			fmt.Printf("version: %s\n", version)
-			fmt.Printf("commit: %s\n", commit)
-			fmt.Printf("date: %s\n", date)
+			fmt.Printf("Version: %s\n", version)
+			fmt.Printf("Commit: %s\n", commit)
+			fmt.Printf("Date: %s\n", date)
 		} else if cmd == "update" {
 			doSelfUpdate()
 		} else if cmd == "check" {
